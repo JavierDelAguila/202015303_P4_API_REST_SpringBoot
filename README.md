@@ -17,10 +17,10 @@ A continuación se detalla cómo ejecutar y utilizar esta aplicación.
 
 
 # Logica BACKEND:
-- Se utiliza *Service* y *Controller* para interactuar entre si y realizar las operaciones pedidas por el usuario.
-- e ha incluido un *Archivo LOG* donde se registran todas las acciones que realiza el servidor backend.
-- Se ha incluido *gestion de errores* creando una pagina de error personalizada.
-- Se utiliza *Thymeleaf* para enviar informacion de vuelta desde backend y mostrarla en el html.
+- Se utiliza **Service** y **Controller** para interactuar entre si y realizar las operaciones pedidas por el usuario.
+- e ha incluido un **Archivo LOG** donde se registran todas las acciones que realiza el servidor backend.
+- Se ha incluido **gestion de errores** creando una pagina de error personalizada.
+- Se utiliza **Thymeleaf** para enviar informacion de vuelta desde backend y mostrarla en el html.
 
 
 
