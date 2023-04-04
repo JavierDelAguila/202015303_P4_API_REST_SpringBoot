@@ -1,4 +1,4 @@
-# README - Creación de Usuarios con Spring Boot
+# README - Spring Boot
 
 Este proyecto es una continuacion de las practicas anteriores, cuyo enfoque ha sido dedicado a la creación de usuarios (Metodo POST) implementando Spring Boot, busqueda de datos en una base de datos local para obtener un listado de localidades que concuerde con la busqueda (Metodo GET), y finalmente acceso a una api para obtener la informacion del tiempo en una de las localidades buscadas. 
 A continuación se detalla cómo ejecutar y utilizar esta aplicación.
@@ -21,6 +21,27 @@ A continuación se detalla cómo ejecutar y utilizar esta aplicación.
 - e ha incluido un **Archivo LOG** donde se registran todas las acciones que realiza el servidor backend.
 - Se ha incluido **gestion de errores** creando una pagina de error personalizada.
 - Se utiliza **Thymeleaf** para enviar informacion de vuelta desde backend y mostrarla en el html.
+
+
+
+
+# METODO GET
+
+## Weather Program (http://localhost:8080/api.html)
+
+Se ha obtenido una base de datos con la ubicacion en latitud y longitud de todas las localidades españolas.
+En el apartado para ver el tiempo ("api/html", ultima opcion del menu) se ha incluido un input por el cual el usuario introduce las primeras letras de la localidad que desea buscar. Al pulsar el boton buscar, se activa el metodo GET el cual enviará a BACKEND la informacion que se desea buscar.
+
+**Seguridad**
+Lo primero que se hace, tanto en FrontEnd como en Backend, es comprobar que este input esta compuesto solo por letras, nada de numeros ni caracteres especiales.
+En caso de encontrarlos, se omite la busqueda y se informa al usuario de que debe quitar aquellos caracteres que no sean letras.
+
+**Verificacion de datos y envio**
+
+Si el input es correcto y solo hay letras, se procede a buscar a traves de nuestra base de datos todas las concurrencias.
+En caso de que no haya localidades que empiecen por los caracteres indicados, se devolvera una lista vacia e informará que no se han encontrado resultados.
+
+En caso positivo de encontrar resultados, se devolverá una lista con todos los resultados obtenidos. Para ver el tiempo en estas localidades, el usuario podrá clicar encima del nombre y esto activará el fetch a una api publica para obtener la informacion del tiempo segun la latitud y longitud de estas localidades.
 
 
 
@@ -47,22 +68,3 @@ De esta forma se consigue informar si ha habido un error debido a introducir los
 Tambien se advierte si no se ha podido crear debido a que ya se encuentra un usuario con ese username creado, y finalmente si todo ha ido bien y ha sido creado sin problemas tambien sera informado de ello.
 
 
-
-
-# METODO GET
-
-## Weather Program (http://localhost:8080/api.html)
-
-Se ha obtenido una base de datos con la ubicacion en latitud y longitud de todas las localidades españolas.
-En el apartado para ver el tiempo ("api/html", ultima opcion del menu) se ha incluido un input por el cual el usuario introduce las primeras letras de la localidad que desea buscar. Al pulsar el boton buscar, se activa el metodo GET el cual enviará a BACKEND la informacion que se desea buscar.
-
-**Seguridad**
-Lo primero que se hace, tanto en FrontEnd como en Backend, es comprobar que este input esta compuesto solo por letras, nada de numeros ni caracteres especiales.
-En caso de encontrarlos, se omite la busqueda y se informa al usuario de que debe quitar aquellos caracteres que no sean letras.
-
-**Verificacion de datos y envio**
-
-Si el input es correcto y solo hay letras, se procede a buscar a traves de nuestra base de datos todas las concurrencias.
-En caso de que no haya localidades que empiecen por los caracteres indicados, se devolvera una lista vacia e informará que no se han encontrado resultados.
-
-En caso positivo de encontrar resultados, se devolverá una lista con todos los resultados obtenidos. Para ver el tiempo en estas localidades, el usuario podrá clicar encima del nombre y esto activará el fetch a una api publica para obtener la informacion del tiempo segun la latitud y longitud de estas localidades.
