@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<link rel="stylesheet" href="./CSS/CSSstyle.css">
+    <link rel="icon" type="image/jpg" href="./Images/lupaicono.png">
+
+
+    <title>Weather API </title></head>
+
+<body>
+
+
+  <img src="./Images/Fondo.jpg" id="foto_inicio" width=100% height=100%> </img>
+
+	<nav>
+		<ul class= "menu">  <!-- UL= unordered list-->
+			<li>   <!-- LI= list item-->
+				<a href="./index.html">About me</a>  <!-- A= elemento ancla, enlace a otras localizaciones-->
+			</li>
+			<li>
+				<a href="./Experience.html">Experience</a>
+			</li>
+
+			<li>
+				<a href="./FormularioSignUp.html">Create an Account</a>
+			</li>
+
+
+			<li>
+				<a href="./api.html">Weather Program</a>
+			</li>
+		</ul>
+	</nav>
+	
+
+  <br>
+  <br>
+
+
+  <div id="div_weather">
+
+	<h2>Weather Forecast!</h2>
+
+	<p>Search here the information of any location from Spain.</p>
+
+	<table id="table">
+		<thead>
+			<tr>
+				<th class="dato_sin_bordes"> </th>
+				<th class="dato_sin_bordes"> </th>
+				<th class="dato_sin_bordes"></th>
+			</tr>
+		</thead>
+		<tbody>
+			<!--
+			<p> Filtrar la busqueda por: </p>
+				<tr>
+					<td><label>Provincia</label></td>
+					<td><input type="checkbox" id="prov_check"></input></td>
+					<td><input type="text" id="prov_input"></td>
+				</tr>
+
+				<tr>
+					<td><label>Tamaño de la poblacion</label></td>
+					<td><input type="checkbox" id="pobl_check"></input></td>
+					<td><input type="text" id="pobl_input"></td>
+				</tr>
+
+				<tr>
+					<td><label>Nombre de la poblacion</label></td>
+					<td><input type="checkbox" required="required" checked="checked" id="nom_check"></input></td>
+					<td><input type="text" required="required" id="nom_input"></td>
+				</tr>
+			-->
+				<tr>
+				<td class="dato_sin_bordes"><label>Ciudades Predeterminadas</label></td>
+					<td class="dato_sin_bordes">
+						<select id="pred_selection">
+							<!--<option id="option_madrid" value="Madridd">Madrid</option>-->
+						</select>
+					</td>
+					<td class="dato_sin_bordes">					
+						<button id="boton_buscar" onclick="buscar_tiempo()">Buscar</button>
+					</td>
+				</tr>
+
+
+				<tr>
+					<td class="dato_sin_bordes"><label>Buscar por nombre</label></td>
+					<td class="dato_sin_bordes">
+						<input id="localidad_partic" type="name" onkeydown="return /[a-z]/i.test(event.key)"> </input>
+					</td>
+					<td class="dato_sin_bordes">					
+						<button id="boton_buscar" onclick="buscar_particular()">Buscar </button>
+					</td>
+				</tr>
+
+		</tbody>
+	</table>
+	<br>
+
+	<div id="lista_locations"></div>
+
+<!--
+	<div class="buttons-left-right">
+		<button id="boton_prev" onclick="prev_day()">Dia anterior</button>
+		<button id="boton_sig" onclick="next_day()">Dia siguiente</button>
+	</div>	
+-->
+	<div id="contenedor"></div>
+
+
+	<!--<p id="texto_skyview"></p>-->
+
+	<br>
+	<!-- <img id="weatherimage" src="https://www.7timer.info/bin/astro.php?lon=41.1&lat=-3.09&ac=0&lang=en&unit=metric&output=internal&tzshift=0"></img> -->
+
+</div>
+
+
+  <br>
+  <br>
+  <br>
+
+
+	<footer>
+		<ul class="menu">
+			<li><a href="https://www.linkedin.com/in/javier-del-aguila-martos/" id="linkedin_logo"> <img src="./Images/linkedin_logo.png" width=7% height=auto></img> </a> </li>
+
+			<li><a href="https://instagram.com/" id="insta_logo"> <img src="./Images/instagram_logo.png" width=7% height=auto></img> </a> </li>
+		</ul>
+	</footer>
+
+
+
+
+</body>
+	<script type="text/javascript" src="javascript_api.js"></script>
+</html>

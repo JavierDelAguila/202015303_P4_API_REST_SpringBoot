@@ -1,0 +1,317 @@
+body {
+  background-color: snow;
+  /* Colores https://www.w3.org/wiki/CSS/Properties/color/keywords */
+  margin-left: 10%;
+  margin-right:10%;
+}
+
+body#fondo_colorido{
+  background-color: snow;
+  margin-left: 10%;
+  margin-right:10%;
+  background-image: url(../Images/wallpaper_color_mix.jpg);   
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#foto_inicio{
+  margin-left: 0;
+  margin-right: 0;
+}
+
+
+p{
+	  margin-left: auto;
+}
+
+h1 {
+  color: black; 
+  margin-left: 5%;
+}
+ 
+h2 {
+  color: gray;
+}
+
+h3{
+  color:navy;
+  text-align: left; 
+  font: 26px sans-serif ;
+
+}
+
+
+table{
+/* con esto movemos y modificamos el espacio donde va a estar nuestros datos de la tabla*/
+	border: 2px solid rgb(20,20,20);
+	border-collapse: collapse;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: white;
+	text-align: center; 
+}
+
+thead{
+	border: 1px solid rgb(50,50,50);
+	border-collapse: collapse;
+	text-align: center; 
+	margin: 1em;
+  padding: 0.2em;
+  color:white;
+	background-color: royalblue;
+}
+
+th{
+  border: 1px solid rgb(50,50,50);
+  border-collapse: collapse;
+  text-align: center; 
+  margin: 1em;
+  padding: 0.4em;
+  /*background-color: chocolate;*/
+}
+
+tbody{
+  border: 1px solid rgb(50,50,50);
+  border-collapse: collapse;
+  text-align: center; 
+  margin: 1em;
+  padding: 0.2em;
+  color:black;
+
+  /*background-color: chocolate;*/
+}
+
+td{
+  border: 1px solid rgb(50,50,50);
+  border-collapse: collapse;
+  text-align: center; 
+  margin: 0.5em;
+  padding: 0.2em;
+}
+
+tr.par{
+  background-color: silver;
+}
+tr.impar{
+  background-color: bisque;
+}
+
+div{
+  padding: 0.5em;
+  margin: 0.1em;
+}
+
+
+
+form{
+  text-anchor: center;
+}
+
+input { 
+    text-align: left; 
+    width: 80%;
+    height: 90%;
+    margin: 2px;
+    box-sizing: border-box;
+}
+
+
+label { 
+    text-align: right; 
+    width: 98%;
+    height: 90%;
+    margin: 2px;
+    box-sizing: border-box;
+}
+
+select{
+  width: 80%;
+  height: 90%;
+  margin: 2px;
+  box-sizing: border-box;
+}
+
+div.caja_traslucida{
+  background: rgba(155,203,252,0.7);
+  display: inline-block;
+  height:100%; width: 70%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 2em;
+  /*
+  position: absolute;
+  top: 40%;
+  */
+  justify-content: center;
+  padding-bottom: 5%;
+  padding-top:5%;
+  text-align: center}
+
+div.grid3x2{
+  display: grid;
+  grid-template-columns:1fr, 1fr;
+  grid-template-areas: 
+    "label1 input1"
+    "label2 input2"
+    "label3 input3"
+    "label4 input4";
+  padding:0.5em;
+  margin:1em;
+  text-align: center;
+  /*background: rgba(255,255,255,0.1);*/
+}
+
+/*El mensaje de alerta */
+.alert {
+  padding: 20px;
+  background-color: rgb(103,130,170); /* Azul marinero */
+  color: white;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+
+/*La X para cerrar el mensaje de alerta*/
+.popup_close {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.popup_close:hover {
+  color: black;
+}
+
+.accept:hover{
+  background: green;
+  color:white;
+}
+
+
+.reset:hover{
+  background: red;
+  color:white;
+}
+
+
+#centro_izq{
+  display: inline-block;
+  height: 60%; width: 60%;
+}
+
+#centro_der{
+  display: inline-block;
+  height: 30%; width: 30%;
+  padding: 2em;
+}
+
+
+
+.menu{
+  display: flex; /* Asi creamos una barra */
+  list-style: none;
+  margin: 0;
+  background: cornflowerblue;
+  padding: 0.1em; /*Area  de relleno en los 4 lados de un elemento a la vez
+  /* em cambia todos a la vez*/
+  justify-content: center; /*centra las cajas del menu*/
+
+}
+
+.menu li{
+  flex: auto;  /*flex-glox \ flex-shrink \ flex-basics */
+  color:white;
+
+}
+
+.menu li:hover{  /*Modifica lo que ocurre cuando paso el cursor por encima*/
+  background: royalblue;
+}
+
+.menu a{
+  text-align: center;
+  display: block;
+  padding: 5%;
+  color: white;
+  user-select: none;
+}
+
+#div_weather{
+ text-align: center;
+}
+
+
+button#boton_buscar{
+  background-color: cornflowerblue;
+  border-radius: 10px;
+  margin:1em;
+  padding:1em;
+  color:white;
+  border:1px navy;
+
+}
+
+button#boton_buscar:hover{
+  background-color: navy;
+  transition-duration: 1s;
+  color:white;
+}
+
+
+.buttons-left-right{
+  flex: auto;  /*flex-glox \ flex-shrink \ flex-basics */
+  color:white;
+
+  display: flex; /* Asi creamos una barra */
+  list-style: none;
+  margin: 0px;
+  padding: 0.1em; /*Area  de relleno en los 4 lados de un elemento a la vez
+  /* em cambia todos a la vez*/
+  justify-content: center; /*centra las cajas del menu*/
+}
+
+.buttons-left-right button{
+  text-align: center;
+  display: block;
+  padding: 1em;
+  margin:0em;
+  background-color: cornflowerblue;
+  color:white;
+  user-select: none;
+  border:0px;
+}
+
+.buttons-left-right button:hover{
+  background-color: navy;
+  transition-duration: 1s;
+  color:white;
+}
+
+
+.dato_sin_bordes{
+  border:0px;
+}
+
+
+
+.boton_lista{
+  padding:1px;
+  background-color: snow;
+  margin: 0.5px;
+  /*border-color: cornflowerblue;*/
+  border: 1px solid snow;
+  border-bottom: 1px solid cornflowerblue;
+}
+
+.boton_lista:hover{
+  color:cornflowerblue;
+}
+
+
+#lista_localidades{
+  list-style-type: none;
+}

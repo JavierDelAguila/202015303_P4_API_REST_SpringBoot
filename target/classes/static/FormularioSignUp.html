@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+
+	<head>
+		<title> Crear usuario</title>
+		<link rel="icon" href="./Images/lupaicono.png">
+		<link rel="stylesheet" href="./CSS/CSSstyle.css">
+	</head>
+
+	<body id="fondo_colorido">
+<!--
+	 style= "
+		background-image: url(./Images/wallpaper_color_mix.jpg);   
+		background-color: snow;
+  		margin-left: 10%;
+  		margin-right:10%;
+"-->
+
+		<img src="./Images/Fondo.jpg" id="foto_inicio" width=100% height=100%> </img>
+
+		<nav>
+			<ul class= "menu">  <!-- UL= unordered list-->
+				<li>   <!-- LI= list item-->
+					<a href="./index.html">About me</a>  <!-- A= elemento ancla, enlace a otras localizaciones-->
+				</li>
+
+				<li>
+					<a href="./Experience.html">Experience</a>
+				</li>
+
+				<li>
+					<a href="./FormularioSignUp.html">Create an Account</a>
+				</li>
+
+				
+			<li>
+				<a href="./api.html">Weather Program</a>
+			</li>
+			</ul>
+		</nav>
+
+		<div class="caja_traslucida">
+
+
+			<h1>Thank you for your interest!</h1>
+			<p>Please fill up this form to create an account</p>
+
+
+			<div class="alert alert-success" role="alert" th:if="${message}">
+		   <span th:text="${message}"></span>
+		   <button aria-label="Close" class="btn-close" data-bs-dismiss="alert"
+				   type="button"></button>
+	   </div>
+<!--
+	   <div th:if="${message}" th:text="${message}" style="color: green"></div>
+	   <div th:if="${param.message}">
+		<p th:text="'Message: ' + ${param.message}">
+		</div>
+
+		<div th:if="${param.message}">
+			<p th:text="${param.message}"></p>
+		  </div>
+
+	-->
+
+
+
+
+			<form action="/user" method="post">
+				<div class="grid3x2">
+					<label for="username" class="label1" pattern="[a-zA-Z0-9]+" required>Username </label>
+					<input class=input1 required="required" placeholder="Username" type="text" id="username" name="username">
+
+					<label for="password" class="label2">Password </label>
+					<input class=input2 required="required" placeholder="Password" type="password" id="password" name="password" onkeyup='check();'>
+
+					
+					<label for="password" class="label2">Repeat password </label>
+					<input required="required" placeholder="Password" type="password" id="password_repeat" name="password_repeat" onkeyup='check();'>				
+					<label for="localidad" class="label2" onkeydown="return /[a-z]/i.test(event.key)">Localidad </label>
+					<input placeholder="Madrid" type="text" id="location" name="localidad">
+<!--
+					<label for="genero" class="label4">Gender: </label>
+					<select class=input4 name="select">
+						<option value="hombre">Male</option>
+						<option value="mujer">Female</option>			
+						<option value="otro">Other</option>   
+					</select>	-->
+				</div>
+				<span id='message'></span>
+
+				<br>
+				<a for="disclaimer" href="https://www.aepd.es/es/politica-de-privacidad-y-aviso-legal">I accept the privacy terms and conditions</a>		
+				<input required="required" type="checkbox" checked="checked" id="disclaimer" name="disclaimer">  
+				<br><br>
+				<button class="accept" focus="true" id="submit" type="submit">Accept </button>
+
+				<button class="reset" id="reset" type="reset"> Erase all </button>
+			</form>
+			<br>
+
+			<div class="alert">
+				<span class="popup_close" onclick="this.parentElement.style.display='none';">&times;</span>
+				Please be sure to fill out all information
+			</div>
+
+		<a href="./index.html"> Go back to menu </a>
+		</div>
+
+
+
+
+		<br>
+		<br>
+		<br>
+		<br>
+
+
+		<br>
+		<br>
+		<br>
+		<br>
+
+		<footer>
+			<ul class="menu">
+				<li><a href="https://www.linkedin.com/in/javier-del-aguila-martos/" id="linkedin_logo"> <img src="./Images/linkedin_logo.png" width=7% height=auto></img> </a> </li>
+
+				<li><a href="https://instagram.com/" id="insta_logo"> <img src="./Images/instagram_logo.png" width=7% height=auto></img> </a> </li>
+			</ul>
+		</footer>
+
+	</body>
+	<script type="text/javascript" src="jsformulario.js"></script>
+
+</html>
