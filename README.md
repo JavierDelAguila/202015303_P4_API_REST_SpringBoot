@@ -32,11 +32,11 @@ A continuación se detalla cómo ejecutar y utilizar esta aplicación.
 Se ha obtenido una base de datos con la ubicacion en latitud y longitud de todas las localidades españolas.
 En el apartado para ver el tiempo ("api/html", ultima opcion del menu) se ha incluido un input por el cual el usuario introduce las primeras letras de la localidad que desea buscar. Al pulsar el boton buscar, se activa el metodo GET el cual enviará a BACKEND la informacion que se desea buscar.
 
-**Seguridad**
+- **Seguridad**
 Lo primero que se hace, tanto en FrontEnd como en Backend, es comprobar que este input esta compuesto solo por letras, nada de numeros ni caracteres especiales.
 En caso de encontrarlos, se omite la busqueda y se informa al usuario de que debe quitar aquellos caracteres que no sean letras.
 
-**Verificacion de datos y envio**
+- **Verificacion de datos y envio**
 
 Si el input es correcto y solo hay letras, se procede a buscar a traves de nuestra base de datos todas las concurrencias.
 En caso de que no haya localidades que empiecen por los caracteres indicados, se devolvera una lista vacia e informará que no se han encontrado resultados.
@@ -51,7 +51,7 @@ En caso positivo de encontrar resultados, se devolverá una lista con todos los 
 
 En esta parte de la practica se ha deseado implementar un forms con el metodo POST cuyo objetivo es que el usuario introduzca el nombre de usuario que desea crear, la contraseña que va a tener y como opcional su localidad.
 
-**Seguridad**
+- **Seguridad**
 Se ha implementado seguridad tanto en el HTML del forms como en el backend, de tal forma que solo es posible crear un usuario formado por letras y numeros, solo se pueden añadir al campo de localidad caracteres, nada de letras.
 Tambien se comprueba tanto en frontend como en backend que las contraseñas aportadas por el usuario sean iguales.
 
@@ -60,7 +60,7 @@ Para añadir seguridad extra, en caso de que alguien consiguiera acceder a la ba
 Por su seguridad, los parametros enviados en el input viajan dentro del protocolo html y no se ven estos parametros en la barra de busqueda de la url, blindandose contra hacker que puedan estar observando el trafico de la red wifi.
 
 
-**Verificacion y envio de confirmacion para el usuario**
+- **Verificacion y envio de confirmacion para el usuario**
 
 Se utiliza thymeleaf para devolver informacion al usuario tras el post de creacion de usuario con informacion sobre como ha ido.
 De esta forma se consigue informar si ha habido un error debido a introducir los parametros mal en los inputs, ya sea introducir caracteres especiales o no aptos en el username o localidad, introducir contraseñas que no sean iguales (lo cual se adviere al usuario mediante un texto en el html que cambia utilizando js segun sea el estado de estos inputs).
