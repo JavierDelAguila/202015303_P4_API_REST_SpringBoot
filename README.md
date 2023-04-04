@@ -31,11 +31,13 @@ Se ha obtenido una base de datos con la ubicacion en latitud y longitud de todas
 En el apartado para ver el tiempo ("api/html", ultima opcion del menu) se ha incluido un input por el cual el usuario introduce las primeras letras de la localidad que desea buscar. Al pulsar el boton buscar, se activa el metodo GET el cual enviará a BACKEND la informacion que se desea buscar.
 
 **Seguridad**
+
 Lo primero que se hace, tanto en FrontEnd como en Backend, es comprobar que este input esta compuesto solo por letras, nada de numeros ni caracteres especiales.
 En caso de encontrarlos, se omite la busqueda y se informa al usuario de que debe quitar aquellos caracteres que no sean letras.
 
 
 **Verificacion de datos y envio**
+
 Si el input es correcto y solo hay letras, se procede a buscar a traves de nuestra base de datos todas las concurrencias.
 En caso de que no haya localidades que empiecen por los caracteres indicados, se devolvera una lista vacia e informará que no se han encontrado resultados.
 
@@ -50,6 +52,7 @@ En caso positivo de encontrar resultados, se devolverá una lista con todos los 
 En esta parte de la practica se ha deseado implementar un forms con el metodo POST cuyo objetivo es que el usuario introduzca el nombre de usuario que desea crear, la contraseña que va a tener y como opcional su localidad.
 
 **Seguridad**
+
 Se ha implementado seguridad tanto en el HTML del forms como en el backend, de tal forma que solo es posible crear un usuario formado por letras y numeros, solo se pueden añadir al campo de localidad caracteres, nada de letras.
 Tambien se comprueba tanto en frontend como en backend que las contraseñas aportadas por el usuario sean iguales.
 
